@@ -1,0 +1,233 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/main1.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>DesignByYou-Now everyone will be a fashion designer</title>
+<!-- InstanceEndEditable -->
+<meta name="viewport" content="width=device-width , initial-scale=1.0">
+<link href="css/index.css" type="text/css" rel="stylesheet" media="screen"><!-- stylesheet for basic template-->
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"><!--fonts-->
+<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet"><!--fonts-->
+<link href="javascript/jquery.js" type="text/javascript" ><!--jquery plugin-->
+<link href="css/menu.css" type="text/css" rel="stylesheet" media="screen"><!--navigation menu css-->
+<script src="javascript/topnav.js"></script><!--template navigation js-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="javascript/responsiveslides.min.js"></script><!--banner js-->
+<link href="css/responsiveslides.css" type="text/css" rel="stylesheet" media="screen"><!--banner css-->
+<script>  //for banner
+  $(function() {
+    $(".rslides").responsiveSlides(
+	);
+  });
+</script>
+<!-- InstanceBeginEditable name="head" -->
+<script>
+	function validateform()
+		{       var name1 = document.forms["signupform"]["firstname"].value;
+				var name2 = document.forms["signupform"]["lastname"].value;
+		
+				var pass1 = document.forms["signupform"]["signup-password1"].value;
+				var pass2 = document.forms["signupform"]["signup-password2"].value;
+          		
+				var date1 = document.forms["signupform"]["birthdate"].value;
+				var date2 = date1.split('-');
+				var year = parseInt(date2[0]);
+				var month = parseInt(date2[1]);
+				var day = parseInt(date2[2]);
+				var today = new Date();
+				var dd = today.getDate();
+				var mm = today.getMonth()+1;
+				var yyyy = today.getFullYear();
+
+				if(dd<10) {
+    						dd='0'+dd
+						  } 
+
+				if(mm<10) {
+    						mm='0'+mm
+						  } 
+
+				today = mm+'/'+dd+'/'+yyyy;
+				today1 = today.split('/');
+				var today_year = parseInt(today1[2]);
+				var today_month = parseInt(today1[0]);
+				var today_day = parseInt(today1[1]);
+				
+				var username1 = document.forms["signupform"]["signup-username"].value;
+								
+				var key1 = /^[a-zA-Z]+$/;
+				var key2 = /^[0-9a-zA-Z]+$/;
+				
+				if(name1.match(key1))
+				{ }
+				else
+				{   alert("name can only have characters");
+				    return false;
+				}
+				if(name2.match(key1))
+				{ }
+				else
+				{   alert("name can only have characters");
+				    return false;
+				}
+				
+				if(year<1930 || year>today_year)
+				{alert("enter valid date");
+				 return false;
+				}
+				
+				if(year==today_year)
+				 {if(month>=today_month)
+				 	{alert("please enter a valid date");
+					 return false;}
+				 }
+				
+				if(username1.match(key2))
+				{}
+				else
+				{	
+					alert("No special characters allowed in username , only digits and alphabets are valid");
+					return false;
+				}
+				
+				if(pass1!=pass2)
+ 				{	alert("enter password correctly");
+					return false;
+				}
+				
+				
+				
+			
+		}
+	
+	
+</script>			
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="wrapper">
+<div id="top-logo">
+
+		<p><a href="index1.php"><img src="images/logo.fw.png" width="409" height="69" class="logo-img"></a></p>
+  <div id="top-right" class="linkprop">
+        	<ul>
+				<li><a href="howitworks.php"> how it works</a></li>
+				<li><a href="whyus.php">why us?</a></li>
+				<li><a href="faq.php">FAQ</a></li>
+			</ul>
+		</div>
+</div>
+
+ 	
+	<div id="top-nav">
+    	<div id="top-nav-left">
+			<ul id="main-menu">
+			  <li class="parent"><a href="#">ladies suits</a>
+              	<ul class="sub-menu">
+                	<li><a href="summer-suit.php">summer wear</a></li>
+                    <li><a href="winter-suit.php">winter wear</a></li>
+                    <li><a href="sleeveless.php">sleeveless suits</a></li>
+                    <li><a href="winter-suit.php">full-sleeve suits</a></li>
+                </ul>
+              </li> 
+			  <li class="parent"><a href="#">sarees</a>
+              	<ul class="sub-menu">
+                	<li><a href="printed-sarees.php">printed</a></li>
+                    <li><a href="embroidery-sarees.php">embroidery</a></li>
+                    <li><a href="zari-sarees.php">Zari work</a></li>
+                </ul>
+              </li>
+              <li class="parent"><a href="#">others</a>
+              	<ul class="sub-menu">
+                	<li><a href="gowns.php">wedding gowns</a></li>
+                    <li><a href="lehngas.php">lehngas</a></li>
+                    <li><a href="#">skirts</a></li>
+                </ul>
+              </li>
+              
+			  <li><a href="contact.php">contact</a></li>
+			  <li><a href="about.php">about</a></li>
+			</ul>
+   	  </div>
+      <div id="top-nav-right">
+        	<ul id="main-menu">
+            	<li><?php session_start(); echo ($_SESSION['login_user']); ?></li>
+             <li><?php if(isset($_SESSION['login_user'])){ ?> <a href="logout.php"><?php echo("logout");} ?></a></li>
+            </ul>
+        </div>
+  
+    	
+	</div>
+    
+	 <!-- InstanceBeginEditable name="content" -->
+
+ 	
+	</div>
+    
+	     <div id = "signup">
+ 			<br><h2>SIGN-UP FORM</h2>
+         	<h3>Enter your details below</h3><br>
+            <form method="post" action="signup(backend).php" name="signupform" onSubmit="return validateform()">
+          <table>
+            	<tr><td>First Name:</td><td><input type="text" name = "firstname" required></td></tr>
+                <tr><td>Last Name:</td><td><input type="text" name = "lastname"></td></tr>
+                <tr><td>Birth-Date:</td><td><input type="date" value="date" name = "birthdate" ></td></tr>
+                <tr><td>Email Address:</td><td><input type="email" name = "email" required></td></tr>
+                <tr><td>Current Address:</td><td><input type="text" name = "address" required></td></tr>
+                <tr><td>Username:</td><td><input type="text" name = "signup-username" required></td></tr>
+                <tr><td>Enter a Password:</td><td><input type="password" name = "signup-password1" required></td></tr>
+                <tr><td>Re-enter Password:</td><td><input type="password" name = "signup-password2" required></td></tr>
+            </table>
+            <br><br>
+            
+            <input type="submit" onClick="#">
+            <input type="button" value="Cancel" onClick="location.href='index.html'">
+            <input type="button" value="Refresh" onClick="location.href='signup.html'">
+            </form>
+            
+            <p>Already have an account , <a href="login.html">Click here </a> to login</p>
+          </div>  
+          
+         
+          		
+        <!-- InstanceEndEditable -->
+        <div id="footer-left">
+        	
+            <h1><u>QUESTIONS</u></h1>
+            <ul>
+            	<li><a href="faq.php">Help and contact</a></li>
+                <li><a href="deliveryreturn.php">Delivery and return</a></li>
+                <li><a href="orderfabric.php">Order fabric samples</a></li>
+                <li><a href="trackorder.php">Track order</a></li>
+                <li><a href="termscondition.php">Terms and conditions</a></li>
+            </ul>    
+                
+        </div>
+        <div id="footer-right">
+        	
+            <ul><li><h2>Join us</h2></li>
+            <li><a href="https://www.facebook.com" target="_blank">
+                <img src="images/icons/icon set 1/1486424773_facebook.jpg"></a></li>
+            	
+                <li><a href="https://www.instagram.com" target="_blank">
+                <img src="images/icons/icon set 1/1486424781_instagram.jpg"></a></li>
+                
+                <li><a href="https://www.twitter.com" target="_blank">
+                <img src="images/icons/icon set 1/1486424789_twitter.jpg"></a></li>
+                
+                <li><a href="https://plus.google.com/" target="_blank">
+                <img src="images/icons/icon set 1/1486424808_google-plus.jpg"></a></li>
+                
+                <li><a href="https://www.linkdin.com" target="_blank">
+                <img src="images/icons/icon set 1/1486424798_linkedin.jpg"></a></li>
+            </ul>    
+        </div>
+          
+</div>
+
+</div>
+
+</body>
+<!-- InstanceEnd --></html>

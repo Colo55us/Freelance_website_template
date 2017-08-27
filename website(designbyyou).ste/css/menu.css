@@ -1,0 +1,194 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+
+
+a {
+	color: rgba(243,49,43,0.87);
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+}
+ol, ul {
+	list-style: none;
+	padding:0px;
+	margin:0px;
+}
+
+
+/* HEADER > MENU */
+#main-menu {
+	
+	font-size: 17px;
+	margin: 10px 0;
+}
+
+#main-menu > li {
+	display: inline-block;
+	margin-left: 30px;
+	padding: 2px 0;
+}
+
+#main-menu > li.parent {
+	background-image: url(../images/top%20nav/plus-gray.png);
+	background-size: 7px 7px;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+#main-menu > li.parent > a {
+	padding-left: 14px;
+}
+
+#main-menu > li > a {
+	color: rgba(0,0,0,1.00);
+	font-size: 17px;
+	line-height: 14px;
+	padding: 30px 0;
+	text-decoration:none;
+}
+
+#main-menu > li:hover > a,
+#main-menu > li.current-menu-item > a {
+	color:rgba(243,49,43,0.87) ;
+}
+
+/* HEADER > MENU > DROPDOWN */
+#main-menu li {
+	position: relative;
+}
+
+ul.sub-menu { /* level 2 */
+	display: none;
+	left: 0px;
+	top: 20px;
+	padding:20px 0 20px 3px;
+	position: absolute;
+	width: 180px;
+	z-index: 9999;
+	font-size: 30px;
+}
+
+ul.sub-menu ul.sub-menu { /* level 3+ */
+	margin-top: -1px;
+	padding-top: 0;
+	left: 149px;
+	top: 0px;
+}
+
+ul.sub-menu > li > a {
+	background-color: #333;
+	border: 1px solid #444;
+	border-top: none;
+	color: #bbb;
+	display: block;
+	font-size: 12px;
+	line-height: 15px;
+	padding: 20px;
+	font-size: 12px;
+}
+
+ul.sub-menu > li > a:hover {
+	background-color: #2a2a2a; 
+	color: #fff;
+}
+
+ul.sub-menu > li:first-child {
+	border-top: 3px solid rgba(224,77,79,1.00);
+}
+
+ul.sub-menu ul.sub-menu > li:first-child {
+	border-top: 1px solid #444;
+}
+
+ul.sub-menu > li:last-child > a {
+	border-radius: 0 0 2px 2px;
+}
+
+ul.sub-menu > li > a.parent {
+	background-image: url(../images/top%20nav/arrow.png);
+	background-size: 5px 9px;
+	background-repeat: no-repeat;
+	background-position: 95% center;
+}
+
+#main-menu li:hover > ul.sub-menu {
+	display: block; /* show the submenu */
+}
+
+@media only screen and (min-width:300px) and (max-width:700px) {
+
+#menu-toggle {
+		display: none;
+	}
+
+	#main-menu {
+		display: block;
+		float: inherit;
+		width:auto;
+		text-align:center;
+		background-color:#FAFAFA;
+	}
+
+	#main-menu li {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+	}
+
+	#main-menu > li {
+		margin-top: -1px;
+	}
+
+	#main-menu > li:first-child {
+		margin-top: 0;
+		display:inline-block;
+	}
+
+	#main-menu > li > a {
+		background-color: #FAFAFA;
+		border: 1px solid #444;
+		color: rgba(0,0,0,1.00);
+		display: block;
+		font-size: 14px;
+		padding: 12px !important;
+		padding: 0;
+	}
+
+	#main-menu li > a:hover {
+		background-color: #444; 
+		display:inline-block;
+	}
+
+	#main-menu > li.parent {
+		background: none !important;
+		padding: 0;
+	}
+
+	#main-menu > li:hover > a,
+	#main-menu > li.current-menu-item > a {
+		
+		border: 1px solid #444 !important;
+		color: #fff !important;
+	}
+
+	ul.sub-menu {
+		display:inlijne ;
+		margin-top: -1px;
+		margin-left: 20px;
+		position: static;
+		padding: 20px 0;
+		width: inherit;
+		font-size: 20px;
+	}
+
+	ul.sub-menu > li:first-child {
+		border-top: 1px solid #444 !important;
+	}
+
+	ul.sub-menu > li > a.parent {
+		background: #333 !important;
+	}
+}
+

@@ -1,0 +1,116 @@
+/* CSS Document */
+/*general*/
+a                   {text-decoration:none;}
+#wrapper			{font-family:'Raleway',sans-serif;background-color:transparent; margin:auto;}
+/*top*/
+.logo-img    		{ margin:10px 0 0 20px; float:left;}
+#top-right   		{float:right; margin:20px 20px 0 0; font-family:'Raleway',sans-serif; border-bottom:none;
+						text-transform:capitalize; border-right-width:5px;}
+#top-right ul li 	{list-style-type:none; display:inline; border-right:1px solid rgba(96,15,225,1.00);
+						 padding:0 5px 0 5px;}
+
+/*navigation menu*/
+#top-nav             {clear:both; font-family: 'Raleway',sans-serif;;  padding:0; 
+                          background-color: #FAFAFA;min-width:760px; border-top:5px solid rgba(247,175,176,1.00);
+						  color:rgba(0,0,0,1.00); text-transform:uppercase;height:50px;}
+#top-nav-right      {float:right; margin-right:30px;}
+#top-nav-left       {float:left; padding-left:0;}
+
+/*banner*/
+#banner             {clear:both; margin:0 0 0 20px; padding-top:10px}
+
+/*content*/
+#content            {padding:0; margin:0; margin-top:10px; margin-left:20px; font-family:'Dosis', sans-serif;float:left;}
+#content ul         {display:inline-block; float:left; padding:10px; width:400px; height:400px; margin:15px;
+						border:1px dotted rgba(209,169,170,1.00);background-color:#FAFAFA; }
+#content ul li img  {width:300px; height:300px; margin:10px 0 10px 60px;}
+.textalign          {text-align:center;}
+#pro-visit          {}
+#pro-visit ul       { margin-top:0; height:400px; width:860px;}
+#pro-visit ul li img{width:700px; height:300px;}
+
+/*right column*/
+#right-column       {margin:0; padding:0; height:1200px; width:350px; float:right; border:4px rgba(247,192,193,1.00) outset;
+						 margin-top:20px; margin-right:10px;}
+#right-column ul    {width:350px;}
+#right-column ul li img {margin:15px 15px 15px 30px; border:2px rgba(42,13,13,1.00) thick}
+.right-coloumn-img  {width:300px; height:450px; margin-top:20px;padding-top:30px;}
+#arrow              {margin:0; padding:0;} 
+/*footer*/
+#footer             {margin:30px 20px 20px 20px;clear:left;}
+#small-about        {margin:10px 10px 10px 10px;padding:30px 20px 10px 10px;}
+#footer-left        {padding:10px 0 10px 20px;float:left;padding-bottom:30px;} 
+#footer-left ul li  {font-size:18px;padding-left:20px;}
+#footer-left ul     {padding-left:40px;}
+#footer-right       {float:right;}
+#footer-right ul li {display:inline}  
+
+
+/*how it works*/
+#howitworks-img     {margin-top:20px;margin-left:180px;}
+
+/*FAQ*/
+#faq                {margin-left:25px;}
+ 
+/*whyus*/
+ #whyus             {margin-left:25px; margin-top:20px; margin-bottom:50px;}
+
+/*signup*/
+#signup             {margin-left:450px;margin-bottom:40px;}
+
+
+/*login*/
+#login-form          {margin-left:450px; margin-bottom:100px;}
+
+/*tour*/
+#tour                {margin-bottom:200px;}
+#tour p              {font-size:22px;}				
+#tour1               {margin:25px 210px 25px 200px; background-color:rgba(224,200,201,1.00);padding:10px;}
+#tour2 img           {margin-left:270px; height:375px; width:800px;}
+#tour3 img           {margin:0; padding:0; height:375px; width:800px;padding:20px 0 20px 0;}
+#tour4 img           {margin:0; padding:0; height:375px; width:800px;padding:20px 0 20px 0;}
+
+/*visit by pro*/
+#visitbypro          {background-image:url(../images/provisit/img1.jpg);margin-left:200px;margin-right:200px;
+					  height:600px;}
+#visitbypro2         {margin-left:200px;}
+
+
+/*get started*/
+#imgupload           {margin-left:300px;width:700px;margin-bottom:400px;}
+#imgupload table tr td{padding:10px;}
+
+
+/*order completed*/
+#ordercompleted      {margin-bottom:200px;}
+
+
+/*cart or amount.php*/
+#cart         		  {margin-bottom:250px;padding-left:50px;}
+#cart_table			  {padding:30px;}
+
+#cart table th  {padding:10px;}
+#cart table td  {padding:10px;}
+#coupon         {float:right;Padding:25px;}
+
+/*checkout*/
+#checkout      {margin:30px 100px 200px 100px;padding:30px;width:500px; }
+
+@media only screen and (min-width:100px) and (max-width:700px)
+{
+	.body { margin: 0 auto ; width : 98% ; clear:both;}
+	/*top*/
+	.logo-img    		{ margin:auto; float:left;size:inherit;width:100%;height:auto;}
+    #top-right   		{float:inherit; margin:auto; font-family:'Raleway',sans-serif; border-bottom:none;
+						text-transform:capitalize; border-right-width:5px;}
+    #top-right ul li 	{list-style-type:none; display:inline; border-right:1px solid rgba(96,15,225,1.00);
+						 padding:0 5px 0 5px;}
+						 
+	/*nav*/
+    #top-nav             {clear:both; font-family: 'Raleway',sans-serif;;  padding:0; 
+                          background-color: #FAFAFA;border-top:5px solid rgba(247,175,176,1.00);
+						  color:rgba(0,0,0,1.00); text-transform:uppercase;height:auto;margin:auto;}
+    #top-nav-right      {float:right; margin-right:30px;}
+    #top-nav-left       { padding-left:0;}
+	
+}
